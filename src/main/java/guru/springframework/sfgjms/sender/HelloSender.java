@@ -51,7 +51,6 @@ public class HelloSender {
             .build();
         
         Message receiveMsg = jmsTemplate.sendAndReceive(JmsConfig.MY_SEND_RCV_QUEUE, new MessageCreator() {
-            @SuppressWarnings("null")
             @Override
             public Message createMessage(Session session) throws JMSException {
                 Message helloMessage = null;
